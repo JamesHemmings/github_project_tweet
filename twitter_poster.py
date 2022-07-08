@@ -28,5 +28,5 @@ class TwitterPoster:
         tweet_entry = self.driver.find_element_by_css_selector('.DraftEditor-root br')
         tweet_entry.send_keys(message)
         submit_tweet = self.driver.find_elements_by_xpath("//span[contains( text(), 'Tweet')]")
-        submit_tweet[2].click()
+        submit_tweet[-1].click()
 
