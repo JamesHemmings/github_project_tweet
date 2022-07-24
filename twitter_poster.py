@@ -26,7 +26,7 @@ class TwitterPoster:
     def tweet(self, message):
         self.driver.get("https://twitter.com/home")
         tweet_entry = self.driver.find_element_by_css_selector('.DraftEditor-root br')
-        tweet_entry.send_keys(message)
+        tweet_entry.send_keys(message+"\nThis post was automated with Python.")
         submit_tweet = self.driver.find_elements_by_xpath("//span[contains( text(), 'Tweet')]")
         submit_tweet[-1].click()
 
